@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Building a Portfolio Website</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="output.css">
+    <script type="module" src="index.js"></script>
+
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@700&family=Josefin+Sans:ital,wght@1,700&family=Playfair+Display:ital@1&display=swap');
+
+    * {
+        font-family: 'Edu NSW ACT Foundation', cursive;
+    }
+
+    :root {
+        --bg-color: #023020;
+        --sf-color: #355E3B;
+        --text-color: #90EE90;
+    }
+
+    #about-section {
+        animation: scroll-to-top 1s linear;
+    }
+
+    @keyframes scroll-to-top {
+        from {
+            scroll-top: 100%;
+        }
+
+        to {
+            scroll-top: 0;
+        }
+    }
+</style>
+
+<body class=" text-white" style="background: #023020;">
+
+
+    <div id="home-page" class="h-[100vh] flex flex-col justify-between pb-10"
+        style="background: url('images/ewrea.jpeg') no-repeat; background-position: top; background-size: cover;">
+
+        <!-- header section for large screen -->
+        <div class="hidden sm:block">
+
+            <header class="py-[2rem] px-[9%] flex w-[100%] items-center justify-between ">
+                <p class="text-3xl">Shubham.</p>
+
+                <!-- personal details -->
+                <div class="text-xl w-[47%]">
+                    <nav class="">
+                        <a href="#home" class="text-[#90EE90]">Home</a>
+
+                        <a href="#about" class="lg:ml-20 md:ml-10 sm:ml-7 hover:text-[#90EE90]" id="about-btn">About</a>
+
+                        <a href="#education" class="lg:ml-20 md:ml-10 sm:ml-7 hover:text-[#90EE90]"
+                            id="education-btn">Education</a>
+
+                        <a href="#skills" class="lg:ml-20 md:ml-10 sm:ml-7 hover:text-[#90EE90]"
+                            id="skills-btn">Skills</a>
+
+                        <a href="#contact" class="lg:ml-20 md:ml-10 sm:ml-7 hover:text-[#90EE90]"
+                            id="contact-btn">Contact</a>
+                    </nav>
+                </div>
+            </header>
+        </div>
+
+
+        <!-- header section for small screen, application menu-->
+        <div class="block sm:hidden">
+
+            <header class="py-[2rem] flex items-start justify-between flex-col">
+
+
+                <div class="flex w-[100vw] px-[9%] justify-between">
+                    <p class="text-3xl">Shubham.</p>
+
+                    <div class="text-5xl" id="menu">
+                        <i class='bx bx-menu hover:text-[#90EE90]'></i>
+                    </div>
+                </div>
+
+                <!-- personal details -->
+                <div class="text-xl hidden px-[9%] mt-10 list">
+                    <nav class="flex items-start justify-center flex-col">
+                        <a href="#home" class="text-[#90EE90]">Home</a>
+
+                        <a href="#about" class=" hover:text-[#90EE90] mt-6" id="about-btnS">About</a>
+
+                        <a href="#education" class="hover:text-[#90EE90] mt-6" id="education-btnS">Education</a>
+
+                        <a href="#skills" class="hover:text-[#90EE90] mt-6" id="skills-btnS">Skills</a>
+
+                        <a href="#contact" class="hover:text-[#90EE90] mt-6" id="contact-btnS">Contact</a>
+                    </nav>
+                </div>
+
+            </header>
+        </div>
+
+
+        <!-- about section -->
+
+        <section class="flex flex-col justify-between">
+            <p class="px-[9%] sm:text-6xl text-3xl">Hi, I'm <span style="color: #90EE90;">Shubham Singh</span></p>
+
+            <p class="px-[9%] sm:text-4xl text-3xl sm:mt-5 mt-2 font-serif font-bold tracking-wider"
+                style="color:transparent; -webkit-text-stroke: 0.7px #90EE90; ">
+                Front-End Developer</p>
+
+            <p class="px-[9%] sm:text-3xl text-xl sm:mt-5 mt-2 ">An aspiring front-end developer, delving into web
+                development, wholeheartedly embraces HTML, CSS, and JS, with a vision
+                to create captivating user experiences and grow in expertise.</p>
+
+            <div class="px-[9%] sm:mt-7 mt-4 flex sm:text-2xl text-xl">
+
+                <a target="_blank" href="https://www.linkedin.com/in/shubham-kumar-92906b20a/">
+                    <button class="border rounded-lg sm:px-6 px-4 bg-[#90EE90] text-[#023020] border-[#90EE90]">
+                        Hire me
+                    </button>
+                </a>
+
+                <button class="border rounded-lg sm:px-6 px-4 ml-20" style="color: #90EE90; border-color: #90EE90;"
+                    id="talk-btn">
+
+                    Let's Talk
+                </button>
+
+            </div>
+            <div class="number hidden">
+                <div class="flex flex-col px-[9%] mt-5 fixed">
+
+                    <p class="text-green-500 text-3xl ">My Number <i class='bx bxs-hand-down mt-1 '></i></p>
+                    <p class="text-[#90EE90] mt-3 text-4xl tracking-widest">7366009790</p>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- social media details -->
+        <div class="px-[9%] sm:text-4xl text-2xl text-[#90EE90]">
+            <div class="w-[100%] flex justify-between">
+                <a target="_blank" href="https://www.instagram.com/shubhamsingh74892"><i
+                        class='bx bxl-instagram border border-[#90EE90] p-4 rounded-full'></i></a>
+
+                <a target="_blank" href="https://twitter.com/RajputShubbu108"><i
+                        class='bx bxl-twitter border p-4 rounded-full border-[#90EE90]'></i></a>
+
+                <a target="_blank" href="https://www.linkedin.com/in/shubham-kumar-92906b20a/"><i
+                        class='bx bxl-linkedin border p-4 rounded-full border-[#90EE90]'></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- about me section -->
+    <div class="flex items-center justify-center flex-col relative" id="about-section">
+
+
+        <p class="text-6xl text-center mt-36 mb-10">About <span style="color: #90EE90;">Me</span></p>
+
+        <div
+            class="h-[100px] w-[100px] border rounded-full border-l-[#90EE90] border-r-[#90EE90] border-t-[#023020] border-b-[#023020] animate-spin">
+        </div>
+
+        <img class="absolute top-52 mt-12 h-[90px] w-[90px] rounded-full " src="images/sr2(2).jpg" alt="">
+
+    </div>
+
+    <div class="mt-10 px-[9%] mb-10">
+        <p class="text-4xl mt-9 text-center font-bold">Front-End Developer!</p>
+        <p class="text-2xl mt-7 text-center">A budding front-end developer, eager to excel in the field, is diligently
+            mastering JS and ReactJS, displaying
+            proficiency in HTML, CSS, and Tailwind, embracing for new oppurtunities, aims to craft captivating user
+            experiences.</p>
+    </div>
+    <div class="px-[9%] flex justify-center mb-36">
+        <button class="bg-[#90EE90] text-[#023020] text-2xl px-6 py-2 rounded-lg">Read More</button>
+    </div>
+
+    <!-- about education and experiene -->
+    <section class="px-[9%] bg-[#355E3B] py-24" id="education-section">
+        <div class="flex items-center justify-center">
+            <p class="text-6xl ">My <span class="text-[#90EE90]">Journey</span></p>
+        </div>
+
+        <p class="text-4xl mt-10">Education</p>
+
+        <section class=" border-l-2 border-[#023020]">
+
+            <div class="flex relative mt-10">
+
+                <p class="p-4 bg-[#023020] rounded-full absolute top-0 -left-5"></p>
+
+                <div class="">
+                    <div class="border-2 border-[#023020] p-6 rounded-lg ml-10 ">
+
+                        <datagrid class="flex items-center space-x-3 text-2xl font-mono font-light text-[#023020]">
+                            <i class='bx bx-calendar'></i>
+                            <p>2021 - Present</p>
+                        </datagrid>
+
+                        <p class="text-3xl font-bold tracking-wide underline mt-3">Bachelor's Degree - Millenium
+                            Institute Of
+                            Technology & Science</p>
+
+                        <p class="text-2xl mt-3 font-light">Currently pursuing bachelors in computer science
+                            and engineering
+                            from
+                            MITS in Bhopal
+                            situated in Madhya Pradesh.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="flex relative mt-10">
+
+                <p class="p-4 bg-[#023020] rounded-full absolute top-0 -left-5"></p>
+
+                <div class="">
+                    <div class="border-2 border-[#023020] p-6 rounded-lg ml-10 ">
+
+                        <datagrid class="flex items-center space-x-3 text-2xl font-mono font-light text-[#023020]">
+                            <i class='bx bx-calendar'></i>
+                            <p>2017 - 2020</p>
+                        </datagrid>
+
+                        <p class="text-3xl font-bold tracking-wide underline mt-3">Diploma - Gov. Polytechnic
+                            Latehar
+                        </p>
+
+                        <p class="text-2xl mt-3">Accomplished junior enginnering from government
+                            polytechnic latehar in
+                            computer science and
+                            engineering domain.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="flex relative mt-10">
+
+                <p class="p-4 bg-[#023020] rounded-full absolute top-0 -left-5"></p>
+
+                <div class="">
+                    <div class="border-2 border-[#023020] p-6 rounded-lg ml-10 ">
+
+                        <datagrid class="flex items-center space-x-3 text-2xl font-mono font-light text-[#023020]">
+                            <i class='bx bx-calendar'></i>
+                            <p>2005 - 2017</p>
+                        </datagrid>
+
+                        <p class="text-3xl font-bold tracking-wide underline mt-3">Matriculation - Imperial School
+                            Of
+                            Learning</p>
+
+                        <p class="text-2xl mt-3">Have completed secondary education from Imperial
+                            School Of Learning
+                            in
+                            Dhanbad, Jharkhand.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- showcase skills -->
+    <div class="py-24 bg-[#023020] px-[9%]" id="skills-section">
+
+        <div class="flex items-center justify-center">
+            <p class="text-6xl">My <span class="text-[#90EE90]">Skills</span></p>
+        </div>
+
+        <!-- for larger screens -->
+        <span class="hidden sm:block">
+
+            <p class="text-4xl mt-16">Skills and Development</p>
+
+            <div class="border px-5 py-7 w-[570px] rounded-lg mt-6">
+
+                <!-- html stat -->
+                <div class="flex w-full justify-between text-2xl ">
+                    <p class="text-3xl">Html</p>
+                    <p class="text-3xl">90%</p>
+                </div>
+
+                <div class="mt-2 rounded-lg py-1 w-full border flex items-center text-[#90EE90]">
+
+                    <p class="bg-[#90EE90] w-full border py-3 ml-1 mr-20 rounded-lg"></p>
+
+                </div>
+
+                <!-- css stat -->
+                <div class="mt-10 flex w-full justify-between text-2xl ">
+                    <p class="text-3xl">Css</p>
+                    <p class="text-3xl">65%</p>
+                </div>
+
+                <div class="mt-2 rounded-lg py-1 w-full border flex items-center text-[#90EE90]">
+                    <p class="bg-[#90EE90] w-full border py-3 ml-1 mr-96 rounded-lg"></p>
+                </div>
+
+                <!-- tailwnind stat -->
+                <div class="mt-10 flex w-full justify-between text-2xl ">
+                    <p class="text-3xl">Tailwind</p>
+                    <p class="text-3xl">71%</p>
+                </div>
+
+                <div class="mt-2 rounded-lg py-1 w-full border flex items-center text-[#90EE90]">
+                    <p class="bg-[#90EE90] w-full border py-3 ml-1 mr-80 rounded-lg"></p>
+                </div>
+
+                <!-- js stats -->
+                <div class="mt-10 flex w-full justify-between text-2xl ">
+                    <p class="text-3xl">JavaScript</p>
+                    <p class="text-3xl">41%</p>
+                </div>
+
+                <div class="mt-2 rounded-lg py-1 w-full border flex items-center text-[#90EE90]">
+                    <p class="bg-[#90EE90] w-full border py-3 ml-1 mr-[55%] rounded-lg"></p>
+                </div>
+
+                <!-- c++ stats -->
+                <div class="mt-10 flex w-full justify-between text-2xl ">
+                    <p class="text-3xl">C++</p>
+                    <p class="text-3xl">57%</p>
+                </div>
+
+                <div class="mt-2 rounded-lg py-1 w-full border flex items-center text-[#90EE90]">
+                    <p class="bg-[#90EE90] w-full border py-3 ml-1 mr-[45%] rounded-lg"></p>
+                </div>
+
+                <!-- react js stats -->
+                <div class="mt-10 flex w-full justify-between text-2xl ">
+                    <p class="text-3xl">React JS</p>
+                    <p class="text-3xl">70%</p>
+                </div>
+
+                <div class="mt-2 rounded-lg py-1 w-full border flex items-center text-[#90EE90]">
+                    <p class="bg-[#90EE90] w-full border py-3 ml-1 mr-[25%] rounded-lg"></p>
+                </div>
+
+            </div>
+        </span>
+
+        <!-- for smaller screens -->
+        <span class="block sm:hidden">
+
+            <p class="text-3xl mt-16">Skills and Development</p>
+
+            <div class="border px-3 py-5 w-[80vw] rounded-lg mt-6">
+
+                <!-- html stat -->
+                <div class="flex w-full justify-between text-xl ">
+                    <p>Html</p>
+                    <p>90%</p>
+                </div>
+
+                <div class="mt-2 rounded-lg py-1 w-full border flex items-center text-[#90EE90]">
+
+                    <p class="bg-[#90EE90] w-full border py-2 ml-1 mr-10 rounded-lg"></p>
+
+                </div>
+
+                <!-- css stat -->
+                <div class="flex w-full justify-between text-xl mt-6">
+                    <p>Css</p>
+                    <p>65%</p>
+                </div>
+
+                <div class="mt-2 rounded-lg py-1 w-full border flex items-center text-[#90EE90]">
+
+                    <p class="bg-[#90EE90] w-full border py-2 ml-1 mr-24 rounded-lg"></p>
+
+                </div>
+
+                <!-- tailwind stat -->
+                <div class="mt-6 flex w-full justify-between text-xl ">
+                    <p>Tailwind</p>
+                    <p>71%</p>
+                </div>
+
+                <div class="mt-2 rounded-lg py-1 w-full border flex items-center text-[#90EE90]">
+
+                    <p class="bg-[#90EE90] w-full border py-2 ml-1 mr-16 rounded-lg"></p>
+
+                </div>
+
+                <!-- js stat -->
+                <div class="mt-6 flex w-full justify-between text-xl ">
+                    <p>JavaScript</p>
+                    <p>41%</p>
+                </div>
+
+                <div class="mt-2 rounded-lg py-1 w-full border flex items-center text-[#90EE90]">
+
+                    <p class="bg-[#90EE90] w-full border py-2 ml-1 mr-40 rounded-lg"></p>
+
+                </div>
+
+                <!-- c++ stat -->
+                <div class="mt-6 flex w-full justify-between text-xl ">
+                    <p>C++</p>
+                    <p>57%</p>
+                </div>
+
+                <div class="mt-2 rounded-lg py-1 w-full border flex items-center text-[#90EE90]">
+
+                    <p class="bg-[#90EE90] w-full border py-2 ml-1 mr-32 rounded-lg"></p>
+
+                </div>
+
+                <!-- react js stat -->
+                <div class="mt-6 flex w-full justify-between text-xl ">
+                    <p>React JS</p>
+                    <p>70%</p>
+                </div>
+
+                <div class="mt-2 rounded-lg py-1 w-full border flex items-center text-[#90EE90]">
+
+                    <p class="bg-[#90EE90] w-full border py-2 ml-1 mr-[18%] rounded-lg"></p>
+
+                </div>
+
+            </div>
+        </span>
+    </div>
+
+    <!-- contact me details -->
+    <div class="bg-[#355E3B] py-24 px-[9%]" id="contact-section">
+
+        <div class="flex items-center justify-center flex-col">
+
+            <p class="text-6xl">Contact <span class="text-[#90EE90]">Me</span></p>
+
+            <!-- for smaller screens -->
+            <span class="block sm:hidden mt-10">
+
+                <input type="text" placeholder="Full Name"
+                    class="w-[80vw] py-4 rounded-lg px-5 text-[#023020] outline-none text-2xl">
+
+                <input type="text" placeholder="Email Address"
+                    class="w-[80vw] py-4 rounded-lg px-5 text-[#023020] outline-none mt-3 text-2xl">
+
+                <input type="text" placeholder="Mobile Number"
+                    class="w-[80vw] py-4 rounded-lg px-5 text-[#023020] outline-none mt-3 text-2xl">
+
+                <input type="text" placeholder="Email Address"
+                    class="w-[80vw] py-4 rounded-lg px-5 text-[#023020] outline-none mt-3 text-2xl">
+
+                <textarea placeholder="Your Message" name="" id="" cols="20" rows="10"
+                    class="w-[80vw] py-4 rounded-lg px-5 text-[#023020] outline-none mt-3 text-2xl h-[100px]"></textarea>
+            </span>
+
+            <!-- for larger screens -->
+            <span class="hidden sm:block px-[9%]">
+
+                <div class="flex mt-20 space-x-6">
+                    <input type="text" placeholder="Full Name"
+                        class=" py-4 rounded-lg px-5 text-[#023020] outline-none text-2xl w-[40vw]">
+
+                    <input type="text" placeholder="Email Address"
+                        class=" py-4 rounded-lg px-5 text-[#023020] outline-none text-2xl w-[40vw]">
+                </div>
+
+                <div class="flex mt-6 space-x-6">
+                    <input type="text" placeholder="Mobile Number"
+                        class=" py-4 rounded-lg px-5 text-[#023020] outline-none text-2xl w-[40vw]">
+
+                    <input type="text" placeholder="Email Subject"
+                        class=" py-4 rounded-lg px-5 text-[#023020] outline-none text-2xl w-[40vw]">
+                </div>
+
+                <textarea name="" id="" cols="30" rows="10"
+                    class="mt-6 py-4 px-5 text-[#023020] text-2xl h-[120px] rounded-lg border-none outline-none w-[82vw]"
+                    placeholder="Your Message"></textarea>
+
+            </span>
+
+            <button class="bg-[#90EE90] mt-16 py-2 text-3xl text-[#023020] px-8 rounded-lg">Submit</button>
+        </div>
+    </div>
+
+    <div class="mt-10 pb-12 flex items-center justify-center flex-col px-[9%]">
+
+        <button id="home-button" class="bg-[#90EE90] px-3 py-4 text-[#023020] text-4xl"><i
+                class='bx bxs-caret-up-circle'></i></button>
+
+        <p class="text-3xl mt-10 text-center">
+
+            Copyright &copy; 2023 by Shubham | All Rights Reserved</p>
+    </div>
+
+</body>
+
+</html>
